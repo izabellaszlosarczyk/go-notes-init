@@ -1,28 +1,83 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid p-0 m-0 vh-100 text-body">
+      <div class="row p-0 m-0 h-100">
+          <div class="col-12 col-md-5 col-lg-4 bg-light p-0 h-100">
+              <h3 class="w-100 text-center p-4">
+                  <i class="bi-clipboard-check text-secondary"></i>
+                  GoNote
+              </h3>
+              <button type="button" class="btn btn-dark w-100 py-2 rounded-0">
+                  <i class="bi-pen-fill text-white"></i>
+                  Stwórz nową notatkę
+              </button>
+
+              <div class="alert alert-secondary m-3 text-center" role="alert">
+                  <i class="bi-emoji-frown"></i>
+                  Jeszcze nie ma żadnych notatek do wyświetlenia
+              </div>
+              <div class="list-group pt-3 pb-5 px-1">
+                  <div class="list-group-item">
+                      <div class="float-end">
+                          <div class="btn-group" role="group">
+                              <button type="button" class="btn btn-outline-danger">
+                                  <i class="bi-trash-fill"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary">
+                                  <i class="bi-eye-fill"></i>
+                              </button>
+                          </div>
+                      </div>
+                      <h5 class="mb-1">Notatka 1</h5>
+                      <p class="text-muted">Utworzono 14:15 10.03.2021</p>
+                  </div>
+                  <div class="list-group-item">
+                      <div class="float-end">
+                          <div class="btn-group" role="group">
+                              <button type="button" class="btn btn-outline-danger">
+                                  <i class="bi-trash-fill"></i>
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary">
+                                  <i class="bi-eye-fill"></i>
+                              </button>
+                          </div>
+                      </div>
+                      <h5 class="mb-1"> Notatka 2 </h5>
+                      <p class="text-muted">Utworzono 14:20 9.03.2021</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 bg-white p-0 h-100">
+              <div class="cover h-25"></div>
+              <form class="p-3 mt-3 mb-5">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Nazwa</label>
+                      <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="mb-3">
+                      <label for="content" class="form-label">Treść</label>
+                      <textarea class="form-control" id="content"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-secondary w-100">
+                      <i class="bi-save pe-2"></i>
+                      Dodaj notatkę
+                  </button>
+              </form>
+          </div>
+      </div>
+      <nav class="navbar fixed-bottom navbar-dark bg-dark">
+          <div class="container-fluid justify-content-end p-2">
+              <span class="text-muted mx-5 d-none d-md-block">©2021 Polityka prywatności | Warunki korzystania z
+                  usługi</span>
+              <span class="text-light"><i class="bi-heart-fill pe-2"></i>Moje konto</span>
+          </div>
+      </nav>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.cover {
+  background-image: url("https://images.freeimages.com/images/large-previews/e71/frog-1371919.jpg");
+  background-position: center;
+  background-size: cover;
 }
 </style>
